@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body{
+    background-color: #ebf4fd;
+}
+
+.genLayout{
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+nav{
+    padding: .5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > img{
+    width: 140px;
+}
+
+nav > span{
+    width: 30px;
+    height: 30px;
+    background-color: #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+nav > span > img{
+    width: 18px;
+}
+
+/* styling for extionsion */
+
+.extensionTabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extensionTabs > h3{
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: #081140;
+}
+
+.tabButtons > button{
+    padding: .3rem .6rem;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    text-transform: capitalize;
+    color: #081140;
+}
+
+.tabButtons > button:first-child{
+    background-color: #c62419;
+    color: #fff;
+}
+
+.extensionWrapper{
+    margin-top: 1rem;
+    display: grid;
+    gap: 10px ;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.extensionCard{
+    background-color: #fff;
+    height: 30vh;
+    border-radius: 20px;
+    border: 2px solid #e3e8f0;
+    padding: 1rem;
+}
+
+.extensionCardTop{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardContent > h2{
+    color: #081140;
+    /* padding-block: .3rem; */
+    font-size: 1rem;
+}
+
+.cardContent > p{
+    font-size: 16px;
+}
