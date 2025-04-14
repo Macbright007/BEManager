@@ -1,7 +1,11 @@
 const wrapper = document.querySelector(".extensionWrapper");
+const navLogo = document.querySelector(".navLogo");
+const themeButton = document.querySelector(".btn");
 const buttonAll = document.querySelector(".btn1");
 const buttonActive = document.querySelector(".btn2");
 const buttonInactive = document.querySelector(".btn3");
+const themeIcon = document.getElementById("toggleImg");
+const nav = document.getElementById("navBar")
 
 const extensions = [
   {
@@ -96,6 +100,31 @@ const extensions = [
 // // step5: add the created element to html
 // wrapper.appendChild(el)
 
+const themeToggler = () => {
+  document.body.classList.toggle("dark-mode");
+
+  const isDark = document.body.classList.contains('dark-mode');
+
+  // Swap image based on theme
+  // themeIcon.src = isDark ? './images/icon-moon.svg' : './images/icon-sun.svg';
+  themeIcon.src = isDark ? './images/icon-sun.svg' : './images/icon-moon.svg';
+  themeIcon.alt = isDark ? 'Moon Icon' : 'Sun Icon';
+
+  
+  if(isDark){
+    nav.style.backgroundColor = "#000"
+    nav.style.color = "#fff"
+    navLogo.style.color = "#fff"
+  } else{
+    nav.style.backgroundColor = "#fff"
+     nav.style.color = "#000"
+  }
+
+
+};
+
+themeButton.addEventListener("click", themeToggler);
+
 // function to create card
 function createCard(item) {
   card = document.createElement("div");
@@ -124,8 +153,8 @@ function createCard(item) {
 }
 
 extensions.map(function (item) {
-    return createCard(item);
-  });
+  return createCard(item);
+});
 // extensions
 //   .filter((item) => {
 //     return item.isActive === true;
