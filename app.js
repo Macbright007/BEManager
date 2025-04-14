@@ -5,7 +5,7 @@ const buttonAll = document.querySelector(".btn1");
 const buttonActive = document.querySelector(".btn2");
 const buttonInactive = document.querySelector(".btn3");
 const themeIcon = document.getElementById("toggleImg");
-const nav = document.getElementById("navBar")
+const nav = document.getElementById("navBar");
 
 const extensions = [
   {
@@ -103,24 +103,41 @@ const extensions = [
 const themeToggler = () => {
   document.body.classList.toggle("dark-mode");
 
-  const isDark = document.body.classList.contains('dark-mode');
+  const isDark = document.body.classList.contains("dark-mode");
 
   // Swap image based on theme
   // themeIcon.src = isDark ? './images/icon-moon.svg' : './images/icon-sun.svg';
-  themeIcon.src = isDark ? './images/icon-sun.svg' : './images/icon-moon.svg';
-  themeIcon.alt = isDark ? 'Moon Icon' : 'Sun Icon';
+  themeIcon.src = isDark ? "./images/icon-sun.svg" : "./images/icon-moon.svg";
+  themeIcon.alt = isDark ? "Moon Icon" : "Sun Icon";
 
-  
-  if(isDark){
-    nav.style.backgroundColor = "#000"
-    nav.style.color = "#fff"
-    navLogo.style.color = "#fff"
-  } else{
-    nav.style.backgroundColor = "#fff"
-     nav.style.color = "#000"
+  if (isDark) {
+
+
+    nav.style.backgroundColor = "hsl(225, 23%, 24%)";
+    themeButton.style.backgroundColor = "hsl(226, 11%, 37%)";
+    buttonAll.style.color = "hsl(227, 75%, 14%)";
+    buttonActive.style.backgroundColor = "hsl(226, 11%, 37%)";
+    buttonInactive.style.backgroundColor = "hsl(226, 11%, 37%)";
+    extensionCard.style.backgroundColor = "hsl(226, 11%, 37%)";
+    buttonActive.style.color = "#fff";
+    buttonInactive.style.color ="#fff";
+    nav.style.color = "#fff";
+    navLogo.style.color = "#fff";
+
+
+  } else {
+
+
+    nav.style.backgroundColor = "#fff";
+    nav.style.color = "#000";
+    themeButton.style.backgroundColor = "";
+    buttonActive.style.color = "";
+    buttonInactive.style.color ="";
+    buttonActive.style.backgroundColor = "";
+    buttonInactive.style.backgroundColor = "";
+
+
   }
-
-
 };
 
 themeButton.addEventListener("click", themeToggler);

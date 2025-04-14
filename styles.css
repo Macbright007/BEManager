@@ -8,7 +8,7 @@
 }
 
 body.dark-mode {
-    background-color: #121212;
+    background-color: hsl(227, 75%, 14%);
     color: white;
   }
 
@@ -32,7 +32,6 @@ nav{
     padding: .5rem;
     background-color: #fff;
     border-radius: 10px;
-    border: 2px solid #eeeeee;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,10 +71,11 @@ nav > button > img{
 }
 
 .tabButtons > button{
-    padding: .3rem .6rem;
-    border-radius: 20px;
+    padding: .35rem .8rem;
+    border-radius: 15px;
     background-color: #fff;
-    border: 1px solid #eee;
+    border: none;
+    /* border: 1px solid #eee; */
     text-transform: capitalize;
     color: #081140;
 }
